@@ -1,0 +1,137 @@
+/* Modern Footer Styling */
+.library-footer {
+  background: rgba(26, 35, 126, 0.85);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px 20px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.2);
+}
+
+.library-footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.library-footer .footer-logo {
+  flex: 1 1 250px;
+  text-align: left;
+}
+
+.library-footer .footer-logo img {
+  max-width: 150px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.library-footer .footer-logo img:hover {
+  transform: scale(1.05);
+}
+
+.library-footer .footer-logo .brand {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.library-footer .footer-logo .slogan {
+  font-size: 15px;
+  font-style: italic;
+  color: #ffcc00;
+}
+
+.library-footer .footer-column {
+  flex: 1 1 180px;
+}
+
+.library-footer .footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffcc00;
+  position: relative;
+}
+
+.library-footer .footer-column h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #ffcc00;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.library-footer .footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.library-footer .footer-column ul li {
+  margin: 10px 0;
+}
+
+.library-footer .footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.library-footer .footer-column ul li a:hover {
+  color: #ffcc00;
+  transform: translateX(5px);
+}
+
+.library-footer .footer-social {
+  margin-top: 15px;
+}
+
+.library-footer .footer-social a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 22px;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+.library-footer .footer-social a:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+
+.library-footer .footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin-top: 25px;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .library-footer .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .library-footer .footer-logo, 
+  .library-footer .footer-column {
+    text-align: center;
+  }
+
+  .library-footer .footer-column ul li a {
+    display: inline-block;
+  }
+
+  .library-footer .footer-social {
+    justify-content: center;
+    display: flex;
+  }
+}

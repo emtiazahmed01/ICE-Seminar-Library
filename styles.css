@@ -1,0 +1,323 @@
+/* ================= GENERAL ================= */
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: "";
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fdfdfd;
+  color: #222;
+}
+
+/* --- Spacing between sections --- */
+section {
+  margin: 20px 0;       /* Gap between each section */
+  position: relative;   /* Needed for overlays */
+  padding: 0px 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* --- Overlay for better text visibility --- */
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= HEADLINE ================= */
+#headline {
+  background: rgba(56, 108, 145, 0.9);
+  padding: 10px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  max-width: 80%;      /* Shrink to 80% width */
+  margin: 20px auto;   /* Center horizontally */
+  border-radius: 6px;
+}
+#headline::before { display: none; }  /* No overlay here */
+
+/* ================= HERO SLIDER ================= */
+#hero-slider {
+  background: url("./images/deptbanner.jpg") no-repeat center center/cover;
+  background-size: cover;
+  position: relative;
+  padding: 60px 0; /* Top & bottom spacing */
+  overflow: hidden;
+}
+
+/* Semi-transparent overlay for readability */
+#hero-slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: 0;
+}
+
+/* Slider container */
+.slider {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; /* Above overlay */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Slide image */
+.slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Caption on image */
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 51, 102, 0.7);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Slide number */
+#slide-number {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: rgba(0, 51, 102, 0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Navigation buttons */
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.slider-buttons button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.slider-buttons button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ================= TIMETABLE ================= */
+#timetable {
+  background: url("./images/bg.png") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+}
+
+#timetable table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 70%;
+  background: rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+
+#timetable th, #timetable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#timetable th {
+  background: #003366;
+  color: white;
+}
+
+/* ================= SERVICES ================= */
+#services {
+  background: url("./images/keyboard-hands-1440x600.jpeg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.2);
+}
+
+/* ================= UPDATES & EVENTS ================= */
+#updates-events {
+  background: url("./images/notice-board-1000x1000.jpeg") no-repeat center center/cover;
+  color: white;
+  display: flex;
+  height: 300px;
+  justify-content: space-around;
+  text-align: left;
+}
+
+#updates-events ul {
+  list-style: none;
+  padding: 0;
+}
+
+#updates-events li {
+  margin: 8px 0;
+}
+
+/* ================= NEW ARRIVALS ================= */
+#new-arrivals {
+  background: url("./images/book_shelf.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+}
+
+.book-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  margin: 10px;
+  padding: 15px;
+  width: 180px;
+  border-radius: 8px;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* ================= SCROLL REVEAL ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsive nav */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;        /* hide nav links by default */
+    flex-direction: column;
+    background: #1a237e;
+    position: absolute;
+    top: 60px;            /* adjust based on nav height */
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+  }
+
+  #nav-links li {
+    margin: 0;
+  }
+
+  #nav-links li a, #nav-links li .dropdown-btn {
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+  }
+
+  #nav-links li a:hover, #nav-links li .dropdown-btn:hover {
+    background: #3949ab;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Dropdown inside mobile nav */
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background: #3949ab;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  #nav-links {
+    display: flex !important;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: #1a237e;
+    flex-direction: column;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}

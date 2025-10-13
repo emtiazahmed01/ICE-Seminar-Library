@@ -1,0 +1,232 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup || ICE Seminar Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/Fav Icon.png">
+  <link rel="stylesheet" href="./signup.css">
+  <link rel="stylesheet" href="./top_button.css">
+  <link rel="stylesheet" href="./header.css">
+  <link rel="stylesheet" href="./footer.css">
+</head>
+<body class="signup-page">
+  <div class="overlay" id="overlay"></div>
+    <header>
+    <nav>
+      <div class="logo">
+        <a href="./index.php"><img src="./images/logo.png" alt="Logo"></a>
+      </div>
+      <ul id="nav-links">
+        <li><a href="./index.php">Home📚</a></li>
+        <li><a href="./about.html">About🗨️</a></li>
+        <li><a href="./services.php">Services🌐</a></li>
+        <li><a href="./notice.php">Notices🔔</a></li>
+        <li><a href="./download.html">Forms⬇️</a></li>
+        <li><a href="./contact.html">Contact📞</a></li>
+        <li><a href="#" class="active">SignUp🧑‍🎓</a></li>
+        <li><a href="./login.html">Login</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div align="center"><img src="./images/ICE.png" height="80" width="80"></div>
+    <h2>Signup Form</h2>
+    <div class="login-link">
+        Already have an account? <a href="./login.html">Login</a>
+      </div>
+    <form action="./signup.php" method="post" enctype="multipart/form-data">
+
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>1. Personal Information</legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="father">Father's Name:</label>
+        <input type="text" id="father" name="father" required>
+
+        <label for="mother">Mother's Name:</label>
+        <input type="text" id="mother" name="mother" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter Your Mobile Number" required>
+
+        <label for="hall">Hall:</label>
+        <select id="hall" name="hall" required>
+          <option value="">--Select Your Hall--</option>
+          <option value="MUH">Bir Muktijuddha Abdul Malek Ukil Hall</option>
+          <option value="ASH">Basha Shaheed Abdus Salam Hall(ASH)</option>
+          <option value="BKH">Hazrat Bibi Khadiza Hall(BKH)</option>
+          <option value="JSH">July Shaheed Smriti Chhatri Hall (JSH)</option>
+          <option value="NFH">Nabab Foyzunnessa Choudhurani Hall(NFH)</option>
+        </select>
+
+        <label for="blood">Blood Group:</label>
+        <select id="blood" name="blood" required>
+          <option value="">--Select Your Blood Group--</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>O+</option>
+          <option>O-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+        </select>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select Gender--</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </fieldset>
+
+      <!-- Academic Information -->
+      <fieldset>
+        <legend>2. Academic Information</legend>
+
+        <label for="dept">Name of the Department:</label>
+        <select id="dept" name="dept" required>
+          <option value="">--Select Department--</option>
+          <option>ICE</option>
+        </select>
+
+        <label for="level">Level:</label>
+        <select id="level" name="level" required>
+          <option value="">--Select Level--</option>
+          <option>Honours</option>
+          <option>Masters</option>
+        </select>
+
+        <label for="session">Session:</label>
+        <input type="text" id="session" name="session" placeholder="Enter Session (Like 2021-22)" required>
+
+        <label for="yearTerm">Year, Term:</label>
+        <select id="yearTerm" name="yearTerm" required>
+          <option value="">--Select Year & Term--</option>
+          <option>Year: 1, Term: 1</option>
+          <option>Year: 1, Term: 2</option>
+          <option>Year: 2, Term: 1</option>
+          <option>Year: 2, Term: 2</option>
+          <option>Year: 3, Term: 1</option>
+          <option>Year: 3, Term: 2</option>
+          <option>Year: 4, Term: 1</option>
+          <option>Year: 4, Term: 2</option>
+        </select>
+
+        <label for="studentID">Student ID:</label>
+        <input type="number" id="studentID" name="studentID" placeholder="Enter Only Digit (Like 2211001)" required>
+
+        <label for="studentImg">Upload Student Image:</label>
+        <input type="file" id="studentImg" name="studentImg" accept="image/*" required>
+        <small>(Image must be 300x300 & max 100kb)<br></small>
+        <br>To Resize Image, <a href="https://picresize.com/" target="_blank">Click Here</a> 
+      
+      </fieldset>
+
+      <!-- Login Information -->
+      <fieldset>
+        <legend>3. Login Information</legend>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+        <small>(Password must be at least 8 characters)</small>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+      </fieldset>
+
+      <button type="submit" class="btn">Submit</button>
+
+      <div class="login-link">
+        Already have an account? <a href="./login.html">Login</a>
+      </div>
+    </form>
+  </div>
+
+<!-- Popup -->
+<div id="popup" style="display:none;">
+  <div class="popup-content">
+    <span id="closePopup">&times;</span>
+    <p id="popupMessage"></p>
+  </div>
+</div>
+
+<div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up">⬆️</i>
+  </div>
+
+  <footer class="library-footer">
+  <div class="footer-container">
+
+    <!-- Left Logo & Text -->
+    <div class="footer-logo">
+      <img src="./images/ICE.png" alt="ICE Seminar Library Logo">
+      <p class="brand">ICE Seminar Library</p>
+      <p class="slogan">Knowledge at Your Fingertips....</p>
+    </div>
+
+    <!-- Help Links -->
+    <div class="footer-column">
+      <h3>📖Help</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Explore Links -->
+    <div class="footer-column">
+      <h3>🌐Explore</h3>
+      <ul>
+        <li><a href="https://nstu.edu.bd/" target="_blank"><b>NSTU Website</b></a></li>
+        <li><a href="https://sportal.nstu.ac.bd/" target="_blank"><b>NSTU Student Portal</b></a></li>
+        <li><a href="https://e-noticeboard-nu.vercel.app/" target="_blank"><b>E-NoticeBoard-ICE</b></a></li>
+        <li><a href="https://admission.nstu.edu.bd/" target="_blank"><b>NSTU Admission Portal</b></a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h3>📍Get in Touch</h3>
+      <p>Academic Building-2 (8th Floor)<br>Sonapur, Noakhali-3814;<br>Noakhali</p>
+      <ul>
+      <li><p>A/C: 0200005277182</p></li>
+      <li><p>Helpline: <a href="tel:02334496522">02334496522</a></p></li>
+      <li><p>Email: <a href="mailto:office.ice.nstu@gmail.com">office.ice.nstu@gmail.com</a></p></li>
+      </ul>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © ICE Seminar Library. All rights reserved. 2025</p>
+  </div>
+</footer>
+
+<script src="./top-button.js"></script>  
+<script src="./signup.js"></script>
+</body>
+</html>

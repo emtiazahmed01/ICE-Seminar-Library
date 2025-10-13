@@ -1,0 +1,97 @@
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+.form-inline {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.form-inline input, .form-inline button, .form-inline a {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.form-inline button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-inline button:hover { background-color: #45a049; }
+.form-inline a { text-decoration: none; color: #333; }
+.form-inline a:hover { background-color: #eee; }
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+.book-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.book-cover {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.book-cover img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.book-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 8px;
+}
+.book-info {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+}
+.book-status {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #2e7d32;
+}
+.book-status.unavailable {
+    color: #d32f2f;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+}
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.pagination a:hover {
+    background-color: #45a049;
+    color: white;
+}
