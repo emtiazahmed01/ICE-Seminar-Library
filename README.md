@@ -96,9 +96,8 @@ This project is licensed for **academic and departmental use** only.
 
 ## 📞 Contact  
 
-💌 Email: [your.email@example.com](mailto:your.email@example.com)  
-🌐 Project Link: [https://github.com/your-username/SeminarLibrary.page.gd](https://github.com/your-username/SeminarLibrary.page.gd)  
+💌 Email: [emtiazahmedemon2001@gmail.com](mailto:emtiazahmedemon2001@gmail.com)  
+🌐 Project Link: [https://github.com/emtiazahmed01/ICE-Seminar-Library/](https://github.com/emtiazahmed01/ICE-Seminar-Library/)  
 
 ---
 
-⭐ **If you found this project helpful, don’t forget to star the repository!**
