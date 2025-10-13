@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Signup || Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/Fav Icon.png">
+  <link rel="stylesheet" href="./admin_styles.css">
+  <link rel="stylesheet" href="../footer.css">
+</head>
+<body class="admin-page">
+
+    <header class="main-header">
+    <div class="header-left">
+      <a href="#"><img src="../images/ICE.png" alt="ICE Logo" class="logo"></a>
+      <h1>ICE Seminar Library</h1>
+    </div>
+    </header>
+
+  <div class="container">
+
+    <div align="center"><img src="../images/logo.png" height="80" width="180">
+    <center><h2>Admin Signup</h2></center>
+    <div class="login-link">
+          Already have an account? <a href="./admin_login.html">Log in</a>
+        </div>
+    </div>
+    
+
+    <!-- Form -->
+    <div class="form-container">
+      <form method="POST" action="./admin_signup.php" enctype="multipart/form-data">
+        
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="full_name" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
+        </div>
+
+        <!-- Role Selection -->
+        <label>Select Role:</label>
+        <div class="role-selection">
+          <div class="role-option">
+            <input type="checkbox" name="role[]" value="Library Staff"> Library Staff
+          </div>
+          <div class="role-option">
+            <input type="checkbox" name="role[]" value="Course Coordinator"> Course Coordinator
+          </div>
+          <div class="role-option">
+            <input type="checkbox" name="role[]" value="Teacher"> Teacher
+          </div>
+          <div class="role-option">
+            <input type="checkbox" name="role[]" value="Chairman"> Chairman
+          </div>
+        </div>
+
+        <!-- Profile Picture -->
+        <div class="form-group">
+          <label for="profile">Profile Picture (300x300)</label>
+          <div class="file-upload">
+            <label for="profile" class="file-upload-label">Choose Profile Picture:</label>
+            <input type="file" id="profile" name="profile" accept="image/*" required>
+          </div>
+          <p class="info">Required dimensions: 300×300 pixels</p>
+          <div class="file-preview" id="profilePreview"></div>
+        </div>
+
+        <!-- Signature -->
+        <div class="form-group">
+          <label for="signature">Signature (300x80)</label>
+          <div class="file-upload">
+            <label for="signature" class="file-upload-label">Choose Signature File:</label>
+            <input type="file" id="signature" name="signature" accept="image/*" required>
+          </div>
+          <p class="info">Required dimensions: 300×80 pixels</p>
+          <div class="file-preview" id="signaturePreview"></div>
+        </div>
+
+        <!-- Terms -->
+        <div class="terms">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn">Create Admin Account</button>
+
+        <!-- Login Link -->
+        <div class="login-link">
+          Already have an account? <a href="./admin_login.html">Log in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="library-footer">
+  <div class="footer-container">
+
+    <!-- Left Logo & Text -->
+    <div class="footer-logo">
+      <img src="../images/ICE.png" alt="ICE Seminar Library Logo">
+      <p class="brand">ICE Seminar Library</p>
+      <p class="slogan">Knowledge at Your Fingertips....</p>
+    </div>
+
+    <!-- Help Links -->
+    <div class="footer-column">
+      <h3>📖Help</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Explore Links -->
+    <div class="footer-column">
+      <h3>🌐Explore</h3>
+      <ul>
+        <li><a href="https://nstu.edu.bd/" target="_blank"><b>NSTU Website</b></a></li>
+        <li><a href="https://sportal.nstu.ac.bd/" target="_blank"><b>NSTU Student Portal</b></a></li>
+        <li><a href="https://e-noticeboard-nu.vercel.app/" target="_blank"><b>E-NoticeBoard-ICE</b></a></li>
+        <li><a href="https://admission.nstu.edu.bd/" target="_blank"><b>NSTU Admission Portal</b></a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h3>📍Get in Touch</h3>
+      <p>Academic Building-2 (8th Floor)<br>Sonapur, Noakhali-3814;<br>Noakhali</p>
+      <ul>
+      <li><p>A/C: 0200005277182</p></li>
+      <li><p>Helpline: <a href="tel:02334496522">02334496522</a></p></li>
+      <li><p>Email: <a href="mailto:office.ice.nstu@gmail.com">office.ice.nstu@gmail.com</a></p></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © ICE Seminar Library. All rights reserved. 2025</p>
+  </div>
+  </footer>
+
+
+<script src="./admin_script.js"></script>
+
+</body>
+</html>

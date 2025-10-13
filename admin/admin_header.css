@@ -1,0 +1,183 @@
+/* ===== ADMIN LAYOUT (GLOBAL) ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+  overflow: hidden; /* Prevent body scroll */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER (Fixed) ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: #1a237e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .logo img {
+  width: 90px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.navbar .logo h1 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.navbar .admin-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar .admin-info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+/* ===== SIDEBAR (Fixed) ===== */
+.sidebar {
+  position: fixed;
+  top: 70px; /* below header */
+  left: 0;
+  bottom: 0px; /* above footer */
+  width: 220px;
+  background: #283593;
+  color: #fff;
+  overflow-y: auto;
+  padding-top: 20px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 14px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-left: 4px solid transparent;
+  transition: all 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #3949ab;
+  border-left: 4px solid #fbc02d;
+  color: #fbc02d;
+}
+
+.sidebar .logout {
+  margin-top: 20px;
+  background: #f44336;
+  color: white !important;
+  border-left: none;
+  transition: background 0.3s;
+}
+
+.sidebar .logout:hover {
+  background: #d32f2f;
+}
+
+/* ===== MAIN CONTENT (Scrollable) ===== */
+.main-content {
+  margin-top: 70px; /* below header */
+  margin-left: 220px; /* beside sidebar */
+  margin-bottom: 50px; /* above footer */
+  overflow-y: auto;
+  height: calc(100vh - 120px);
+  padding: 30px;
+  background: #f7f8fc;
+}
+
+/* ===== FOOTER (Fixed) ===== */
+.library-footer {
+  position: fixed;
+  left: 220px;
+  right: 0;
+  bottom: 0;
+  background: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+/* ===== SCROLLBAR STYLE ===== */
+.main-content::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .main-content {
+    margin-left: 180px;
+  }
+
+  .library-footer {
+    left: 180px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: fixed;
+    left: -220px;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .library-footer {
+    left: 0;
+  }
+
+  .navbar .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}

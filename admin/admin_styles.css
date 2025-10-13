@@ -1,0 +1,311 @@
+/* Reset inside admin-page only */
+.admin-page * {
+    padding: 10;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background wrapper */
+.admin-page {
+    background: linear-gradient(135deg, #555863 0%, #9689a3 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.admin-page .container {
+    margin: auto; /* This centers the box vertically & horizontally */
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+/* Header */
+.admin-page .main-header {
+  width: 100%;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  color: #fff;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 25px;
+}
+
+.admin-page .main-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-page .main-header .logo {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.admin-page .main-header .logo:hover {
+  transform: scale(1.05);
+}
+
+.admin-page .main-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* Form container */
+.admin-page .form-container {
+    padding: 30px 10px;
+    align-items: center;
+    
+}
+
+/* Form group */
+.admin-page .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.admin-page .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2d3748;
+    font-size: 14px;
+}
+
+.admin-page .form-group input:not([type="checkbox"]):not([type="file"]) {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.admin-page .form-group input:focus:not([type="checkbox"]):not([type="file"]) {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.admin-page .form-group i {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    color: #a0aec0;
+}
+
+.admin-page .password-toggle {
+    cursor: pointer;
+}
+
+.admin-page .form-group .error {
+    color: #e53e3e;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.admin-page .form-group .info {
+    color: #4a5568;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Terms */
+.admin-page .terms {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.admin-page .terms input {
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.admin-page .terms label {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.admin-page .terms a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.admin-page .terms a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.admin-page .btn {
+    width: 100%;
+    padding: 14px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.admin-page .btn:hover {
+    background: #5a67d8;
+}
+
+/* Login link */
+.admin-page .login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.admin-page .login-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.admin-page .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Strength meter */
+.admin-page .strength-meter {
+    height: 5px;
+    margin-top: 8px;
+    border-radius: 3px;
+    background: #e2e8f0;
+    overflow: hidden;
+}
+
+.admin-page .strength-fill {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+/* Role selection */
+.admin-page .role-selection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.admin-page .role-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.admin-page .role-option:hover {
+    border-color: #667eea;
+    background-color: #f7fafc;
+}
+
+.admin-page .role-option input {
+    margin-right: 10px;
+}
+
+/* File upload */
+.admin-page .file-upload {
+    position: relative;
+    margin-top: 10px;
+}
+
+.admin-page .file-upload input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.admin-page .file-upload-label {
+    display: block;
+    padding: 12px 15px;
+    background: #f7fafc;
+    border: 1px dashed #cbd5e0;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-page .file-upload-label:hover {
+    border-color: #667eea;
+    background-color: #edf2f7;
+}
+
+/* File preview */
+.admin-page .file-preview {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.admin-page .file-preview img {
+    max-width: 100%;
+    border-radius: 6px;
+    border: 1px solid #cbd5e0;
+}
+
+.admin-page .dimension-warning {
+    color: #e53e3e;
+    font-size: 12px;
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-page .role-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-page .main-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin-page .main-header .header-left {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .admin-page .main-header h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+    .admin-page .container {
+        max-width: 100%;
+    }
+
+    .admin-page .form-container {
+        padding: 20px;
+    }
+}
